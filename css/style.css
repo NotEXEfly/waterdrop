@@ -1,0 +1,920 @@
+@font-face {
+	font-family: Comfortaa;
+	src: url(../fonts/Comfortaa-Regular.ttf);
+}
+
+
+ /*Основное */
+html {min-width: 346px;}
+body {
+	--main-color: #0cb4ce;
+	font-family: 'Comfortaa', cursive;
+}
+
+.container {
+	margin: auto;
+	height: 100%;
+	max-width: 1240px;
+	min-width: 280px;
+	padding: 0 20px;
+}
+
+
+/* ---------------------- Навигация -------------------------- */
+/*бургер*/
+.humburger{
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 20px;
+	right: 20px;
+	width: 70px;
+  height: 40px;
+}
+#hamburger-icon {
+  height: 100%;
+  position: relative;
+  display: block;
+}
+#hamburger-icon .line {
+  display: block;
+  background: #0dd9f9;
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  border-radius: 4px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+#hamburger-icon .line.line-1 {
+  top: 0;
+}
+#hamburger-icon .line.line-2 {
+  top: 50%;
+}
+#hamburger-icon .line.line-3 {
+  top: 100%;
+}
+#hamburger-icon:hover .line-1, #hamburger-icon:focus .line-1 {
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+}
+#hamburger-icon:hover .line-3, #hamburger-icon:focus .line-3 {
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+}
+
+#hamburger-icon.active .line {background-color: #ecf0f1;}
+#hamburger-icon.active .line-1 {
+  transform: translateY(20px) translateX(0) rotate(45deg);
+  -webkit-transform: translateY(20px) translateX(0) rotate(45deg);
+  -moz-transform: translateY(20px) translateX(0) rotate(45deg);
+}
+#hamburger-icon.active .line-2 {
+  opacity: 0;
+}
+#hamburger-icon.active .line-3 {
+  transform: translateY(-20px) translateX(0) rotate(-45deg);
+  -webkit-transform: translateY(-20px) translateX(0) rotate(-45deg);
+  -moz-transform: translateY(-20px) translateX(0) rotate(-45deg);
+}
+
+
+
+/*-----------*/
+.nav-wrap {
+	height: 60px;
+}
+nav {
+	margin: 0 auto;
+	width: 100%;
+	/*position: absolute;*/
+	z-index: 998;
+	background-color: var(--main-color);
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+nav #toggle-list {
+	z-index: 999;
+}
+
+.sail-options {
+	display: none;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+	background-color: var(--main-color);
+	position: absolute;
+	max-width: 692px;
+}
+
+.stickytop {
+ position:fixed;
+ top:0
+}
+
+.sail-options ul {
+	display: block;
+}
+
+.sail-options li {
+	margin: 0 10px;
+}
+
+.sail-options li a{
+	width: 600px;
+}
+
+/* ------------ Кнопки навигации ------------ */
+.navigation>ul>li>a {
+  text-decoration: none;
+  font-weight: 600;
+  outline: none;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 30px;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  transition: .4s;
+}
+
+.navigation>ul>li>a:hover {
+  background-color: #fff;
+  border-bottom: 2px solid #fff;
+  color: var(--main-color);
+}
+
+/* ------------------------ Шапка ------------------------ */
+/*Затемнитель фона*/
+.obscurer {
+	background-color: rgba(0,0,0,0.4);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	height: 100vh;
+	background: url(../images/bg/bg-min.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.main-info {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+}
+
+.phones-and-address {
+	align-self: flex-start;
+}
+
+.main-left-info {
+	padding-right: 30px;
+	max-width: 900px;
+	text-align: center;
+}
+
+.main-left-info .logo-container {
+	padding-bottom: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.main-left-info img {
+	width: 50%;
+}
+
+.main-left-info .logo-text p{
+	margin: 6px 0;
+	padding-left: 30px;
+	font-size: 36px;
+}
+
+.main-left-info .header-text {
+	letter-spacing: 2.5px;
+	font-size: 40px;
+	text-align: left;
+}
+
+.main-right-info {min-width: 302px;}
+
+.main-right-info .phone-number {
+	font-size: 38px;
+	line-height: 1.4;
+	text-align: center;
+}
+
+.main-right-info address {
+	text-align: center;
+	font-size: 19px;
+}
+
+/*Форма*/
+form {
+	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+form input{
+	transition: 0.5s;
+	font-family: 'Comfortaa', cursive;
+	font-size: 20px;
+	background-color: rgba(0,0,0,0);
+	padding: 10px;
+	border: 2px solid #cfcfcf;
+	margin: 10px;
+	color: #cfcfcf;
+}
+
+form label {
+	font-size: 18px;
+	margin-left: 10px;
+	padding-top: 8px;
+}
+
+
+input::placeholder {
+	color: silver; 
+	opacity: 1; 
+	transition: opacity 0.3s ease;
+}
+
+input:focus::placeholder {
+	opacity: 0; 
+	transition: opacity 0.3s ease;
+}
+
+.bad-info {
+	display: block;
+	border: 2px solid red !important;
+}
+
+/* ------------------ */
+#sect-1  h1 {
+	text-align: center;
+	margin: 0;
+	padding-top: 40px;
+	color: var(--main-color);
+}
+
+#sect-1 .products img {
+	width: 300px;
+}
+
+#sect-1 .row {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 100px;
+}
+
+#sect-1 .row .col {
+	position: relative;
+	text-align: center;
+	padding: 0 10px 50px 10px;
+}
+
+
+#sect-1 .col h2 {
+	color: var(--main-color);
+	font-size: 30px;
+	margin: 14px 0;
+}
+
+#sect-1 .col p {
+	font-size: 20px;
+	color: #7f7f7f;
+}
+
+#sect-1 .price {
+  top: -70px;
+  right: 0;
+  font-size: 45px;
+  line-height: 3.3;
+  width: 145px;
+  height: 145px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: absolute;
+}
+
+#sect-2 {
+	background: url(../images/bg/sect-back.png) no-repeat center;
+}
+
+.sale-block .container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.sale-block .bottle-sale {
+	padding: 20px;
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+
+.sale-block .bottle-sale .sale {
+	font-weight: bold;
+	position: absolute;
+	color: #e21e79;
+	top: 30%;
+  left: 43%;
+}
+
+.sale-block .bottle-sale #little-s {
+	font-size: 150px;
+}
+
+.sale-block .bottle-sale #big-s {
+	font-size: 200px;
+}
+
+.sale-block .bottle-sale img {
+	width: 100%;
+}
+
+.sale-block .sale-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 40px 0;
+}
+.sale-block h2 {
+	margin: 0;
+	padding-bottom: 50px;
+	width: 600px;
+	font-size: 70px;
+	text-align: center;
+	color: #fff;
+}
+
+.sale-block h2 span{
+	color: #04ffc2;
+}
+
+.sale-block .products-btn {
+	text-align: center;
+	line-height: 1.8;
+	font-size: 30px;
+	height: 50px;
+	width: 70%;
+	border: 2px solid #fff;
+	color: white;
+}
+
+#sect-3 {
+}
+
+#sect-3 .container {
+	background: url(../images/tree.jpg) no-repeat right center;
+}
+
+#sect-3 .sale-info {
+	max-width: 520px !important;
+}
+
+#sect-3 .sale-info h2 {
+	color: #46a1de;
+	font-size: 38px;
+	margin: 0;
+}
+
+#sect-3 .sale-info h3 {
+	margin-top: 0;
+	line-height: 1.6;
+	font-size: 28px;
+	color: #7f7f7f;
+}
+
+#sect-3 .sale-info p {
+	font-size: 18px;
+	line-height: 1.6;
+	color: #7f7f7f;
+	padding-bottom: 30px;
+}
+
+#sect-3 .products-btn,
+#sect-7 .products-btn {
+	text-align: center;
+	line-height: 1.8;
+	font-size: 30px;
+	height: 50px;
+	width: 440px;
+}
+
+#sect-4 {
+	background: url(../images/bg/sect-back-2.jpg) no-repeat center;
+}
+#sect-6 {
+
+	background: url(../images/bg/sect-back-3.jpg) no-repeat center;
+}
+
+
+#sect-5 .container {
+	background: url(../images/howmain.gif) no-repeat 90% center;
+}
+#sect-7 h2,
+#sect-5 h2 {
+	margin-top: 0;
+	color: #46a1de;
+	font-size: 38px;
+	line-height: 1.3;
+}
+
+#sect-5 ol {
+	padding-left: 30px;
+}
+
+#sect-5 ol li{
+	font-weight: bold;
+	font-size: 18px;
+	color: #7f7f7f;
+	line-height: 2;
+}
+
+#sect-3 .sale-info,
+#sect-5 .how-get-water-info,
+#sect-7 .left-content {
+	max-width: 660px;
+	padding: 60px 0 60px 6%;
+}
+
+#sect-7 .wrapper {
+	background: url(../images/map-image.png) no-repeat 101% center;
+}
+
+#sect-7 .left-content {
+	max-width: 560px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+#sect-7 .left-content p {
+	color: #7f7f7f;
+	line-height: 1.4;
+	font-size: 20px;
+}
+
+#sect-7 .just-bold {
+	font-size: 24px !important;
+	padding-bottom: 20px;
+}
+
+
+#sect-7 #map {
+	width: 100%;
+	height: 600px;
+}
+
+#sect-8 h2{
+	margin: 0;
+	padding-top: 40px;
+	padding-bottom: 70px;
+	font-size: 34px;
+	text-align: center;
+	color: #0071bc;
+}
+
+#sect-8 .wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 1500px;
+}
+
+#sect-8 .wrapper .col:nth-child(2){
+	padding-top: 180px;
+	padding-bottom: 180px;
+}
+
+#sect-8 .wrapper .col:first-child{order: 1;}
+#sect-8 .wrapper .col:nth-child(2){order: 4;}
+#sect-8 .wrapper .col:nth-child(3){order: 2;}
+#sect-8 .wrapper .col:nth-child(4){order: 5;}
+#sect-8 .wrapper .col:last-child{order: 3;}
+
+#sect-8 .col{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 360px;
+	text-align: center;
+	color: #0071bc;
+	padding-bottom: 80px;
+}
+
+
+#sect-8 .col h3 {
+	font-size: 32px;
+	padding-top: 6px;
+	margin: 0;
+}
+
+#sect-8 .col img {
+	width: 180px;
+}
+
+#sect-8 .container {
+	position: relative;
+}
+
+#sect-8 .vertical-colunm {
+	/*display: none !important;*/
+  top: 260px;
+  left: 38%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+}
+
+#sect-8 .vertical-colunm img {
+  padding-bottom: 18%;
+  height: 0%;
+  width: 36%;
+}
+
+#sect-8 .products-btn {
+	text-align: center;
+	font-size: 30px;
+	width: 440px;
+	line-height: 1.7;
+	height: 50px;
+	position: absolute;
+	right: 20px;
+	bottom: 180px;
+}
+
+#sect-8 .wrapper p {
+	font-size: 18px;
+	line-height: 1.4;	
+}
+
+#sect-8 .wrapper .col:last-child {
+	padding-bottom: 40px;
+}
+
+
+#sect-9 {
+	text-align: center;
+	background-color: #eee;
+}
+
+#sect-9 .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #0071bc;
+}
+
+#sect-9 .container h2 {
+	font-size: 40px;
+}
+
+#sect-9 .container h2:first-child {
+	padding-top: 40px;
+}
+
+#sect-9 .phones-info {
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+#sect-9 address {
+	font-size: 30px;
+}
+
+#sect-9 h2 span{
+	display: block;
+	padding-bottom: 10px;
+}
+
+#sect-9 p {
+	max-width: 900px;
+	font-size: 30px;
+	padding: 30px 0;
+	margin-bottom: 0;
+}
+
+#sect-9 .products-btn {
+	margin-top: 50px;
+	width: 400px;
+	height: 50px;
+	font-size: 30px;
+	line-height: 1.8;
+	margin-bottom: 70px;
+}
+
+footer {
+	letter-spacing: 2px;
+	text-align: center;
+	padding: 20px;
+	color: #0071bc;
+}
+
+footer h2 {
+	line-height: 2;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+footer>a{
+	text-decoration: none;
+	color: #0071bc;
+	font-size: 30px;
+	padding-top: 10px;
+}
+
+footer .admin-page {
+	text-decoration: none;
+	color: #0071bc;
+}
+
+footer h2 span {
+	font-weight: bold;
+	color: var(--main-color);
+}
+
+
+/*модальное окно*/
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay.open {
+	z-index: 9999;
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal {
+  background-color: #1d1c19;
+  text-align: center;
+  padding: 40px 40px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay .modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay .modal .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal .title {
+  margin-top: 0;
+}
+
+.overlay form {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.overlay form label {
+	color: #cfcfcf;
+	text-align: left;
+}
+
+.overlay form #modal_submit_btn {
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0);
+  color: #cfcfcf;
+  outline: 2px solid #cfcfcf;
+}
+
+.overlay form #modal_submit_btn:before{
+  background: #cfcfcf;
+}
+
+.overlay form #modal_submit_btn:after {
+  background-color: #343434;
+}
+
+.overlay form input::placeholder {color: #8f8f8f;}
+.modal .okay-message {
+	display: block;
+	color: #FFF;
+	font-size: 26px;
+	padding: 0 30px;
+}
+
+.modal .okay-message p {
+	margin: 0;
+}
+
+.modal .okay-message p:first-child {
+	padding-bottom: 20px;
+}
+
+/* -------------------------------------- */
+@media screen and (max-width: 412px) {
+	/* модалка */
+	.overlay .modal {padding: 40px 0;width: 100%;}
+	.overlay .modal form {width: 88%; margin: 0 auto !important;}
+	/* Акции */
+	.sale-block h2 {font-size: 40px;}
+	/**/
+	#sect-1 .products-btn {width: 100%;margin-left: -20px;}
+	#sect-5 .how-get-water-info {padding: 40px 0;}
+	/* Контакты */
+	#sect-9 h2 {font-size: 28px !important;}
+	#sect-9 p {font-size: 26px}
+	/* Воздух с дерева*/
+	#sect-3 .products-btn,
+	#sect-7 .products-btn {font-size: 26px;height: 40px;}
+	#sect-7 .left-content {padding: 10px 0 60px 6%;}
+	/* Схема работы */
+	#sect-8 .products-btn {width: calc(100% - 40px); font-size: 22px; height: 40px;}
+	/* гамбургер */
+	.navigation>ul>li>a {font-size: 40px !important;}
+	.main-left-info img {width: 100% !important;}
+}
+
+@media screen and (max-width: 548px){
+	/*header*/
+	.main-left-info img {width: 90% !important;}
+	.logo-text {display: none;}
+	.main-left-info .logo-container {padding-bottom: 14px;}
+	.main-right-info form {padding-top: 10px;}
+	/* как делаем чистую воду и воздух с дерева*/
+	#sect-3 .products-btn,
+	#sect-7 .products-btn {width: calc(100% - 40px);}
+	#sect-3 .sale-info h3 {font-size: 22px;}
+	#sect-3 .sale-info h2,
+	#sect-5 h2,
+	#sect-7 .left-content h2 {font-size: 28px;}
+	#sect-7 .left-content p {font-size: 18px;}
+	#sect-5 ol li {font-size: 14px;}
+
+	/* Контакты */
+	#sect-9 .products-btn {width: 90%;font-size: 24px;width: 280px;height: 40px; margin-bottom: 30px;}
+	#sect-9 h2 {font-size: 34px;}
+	#sect-9 .container h2:first-child {padding: 0;}
+	#sect-9 p {padding-bottom: 0;}
+
+	.navigation>ul>li>a {font-size: 36px !important;}
+	footer>a {font-size: 24px;}
+}
+@media screen and (max-width: 850px) {
+	.main-left-info .header-text {font-size: 28px !important;}
+}
+
+@media screen and (max-width: 768px) {
+	/* модалка */
+	.overlay {padding: 0;}
+	.modal .okay-message {padding: 0;}
+	/*header*/
+	header .main-left-info {padding: 0;}
+	header .main-info {flex-direction: column; justify-content: center;}
+	header .header-text {display: none;}
+	/*Каталог*/
+	#sect-1 .products img {width: 260px;}
+	/* Акции */
+	.sale-block h2 {font-size: 50px;width: 100%;}
+	.sale-block .products-btn {width: 90%;}
+	/* Доставка по элисте */
+	#sect-7 h2{padding: 40px 0 0 0;}
+	/* Схема работы */
+	#sect-8 .wrapper {
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+	}
+	#sect-8 .col {padding-bottom: 48px !important;padding-top: 0 !important;}
+	#sect-8 .products-btn {
+		position: static;
+		margin: 0 auto 40px auto;
+		display: block !important;
+		width: 90%;
+		font-size: 28px;
+	}
+	#sect-8 .wrapper .col:first-child{order: 1;}
+	#sect-8 .wrapper .col:nth-child(2){order: 2;}
+	#sect-8 .wrapper .col:nth-child(3){order: 3;}
+	#sect-8 .wrapper .col:nth-child(4){order: 4;}
+	#sect-8 .wrapper .col:last-child{order: 5; padding-bottom: 40px !important;}
+
+	/* Навигация */
+	.humburger{display: block;}
+	.nav-wrap {
+		position: fixed;
+		z-index: 998;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+	nav {width: 100%;height: 100%; display: flex; align-items: center;}
+	nav ul {display: block; width: 100%;}
+	nav ul li:last-child a {border: none}
+	nav ul li:last-child a:hover {border: none}
+	.navigation>ul>li>a {display: block; text-align: center; margin: 0; font-size: 60px;}
+	nav #toggle-list {display: none;}
+	footer .divide-block {display: block;}
+}
+
+@media screen and (max-width: 992px) {
+	/* Акции */
+	.sale-block .bottle-sale{display: none;}
+	/* как делаем чистую воду */
+	#sect-3 .container,
+	#sect-5 .container {background: none !important;}
+	#sect-3 .sale-info,
+	#sect-5 .how-get-water-info h2{text-align: center;}
+	#sect-3 .sale-info,
+	#sect-5 .how-get-water-info {margin: 0 auto;}
+	#sect-7 .wrapper {background: none;}
+	#sect-7 .wrapper .left-content {margin: 0 auto;text-align: center;}
+	/* Схема работы */
+	#sect-8 .vertical-colunm {display: none !important;}
+	#sect-8 .products-btn {display: none;}
+
+	.main-left-info .logo-container {display: block;}
+	.main-left-info img {width: 70%;}
+	.main-left-info .logo-text p {padding-left: 0; font-size: 38px !important;}
+}
+
+@media screen and (max-width: 1076px) {
+	/* Каталог */
+	#sect-1 .row .col {padding-bottom: 100px;}
+	#sect-1 .row .col:last-child {padding-bottom: 50px;}
+
+	/* Акции */
+	.sale-block .bottle-sale #little-s {font-size: 90px;}
+	.sale-block .bottle-sale #big-s {font-size: 140px;}
+
+	
+
+	/* как делаем чистую воду и воздух с дерева*/
+	#sect-3 .products-btn,
+	#sect-7 .products-btn {margin: 0 auto;}
+	#sect-5 .container {background: url(../images/howmain.gif) no-repeat 98% center;}
+	#sect-3 .sale-info,
+	#sect-5 .how-get-water-info,
+	#sect-7 .left-content {padding-left: 0;}
+	
+	.main-left-info .logo-container {display: block;}
+	.main-left-info img {width: 70%;}
+	.main-left-info .logo-text p {padding-left: 0; font-size: 38px !important;}
+}
+
+@media screen and (max-width: 1260px) {
+	.main-left-info .header-text {font-size: 32px;}
+	.main-left-info .logo-text p {font-size: 30px;}
+	.navigation>ul>li>a {padding: 10px 5px;}
+}
+/*.nav-wrap{display: none;}
+	header{display: none;}
+	#sect-1 {display: none;}
+	#sect-2 {display: none;}
+	#sect-3 {display: none;}
+	#sect-4 {display: none;}
+	#sect-5 {display: none;}
+	#sect-6 {display: none;}
+	#sect-7 {display: none;}
+	#sect-8 {display: none;}
+	#sect-9 {display: none;}
+
+	footer {display: none;}*/

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Капля - доставка воды</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  shrink-to-fit=no">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+  <header>
+    <div class="obscurer">
+    	<div class="container">
+
+    		<div class="main-info">
+          <div class="main-left-info">
+            <div class="logo-container">
+              <img src="images/logo-kapla.png">
+              <div class="logo-text">
+                <p>Доставка в офис.</p>
+                <p>Доставка на дом.</p>
+              </div>
+            </div>
+            <div class="header-text">
+              Закажите доставку питьевой воды в офис или на дом в любую точку Элисты, просто одним кликом мышки.
+            </div>
+          </div>
+
+          <div class="main-right-info">
+            <div class="phones-and-address">
+              <div class="phone-number">8 (927) 596 57 16</div>
+              <div class="phone-number">8 (988) 546 73 21</div>
+              <address>г.Эиста, улица Пушкина д.87</address> 
+            </div>     
+            <form method="post">
+              <label for="user_name">Ваше имя:</label>
+              <input type="text" name="" id="user_name" placeholder="Дмитрий" autocomplete="off">
+              <label for="user_phone">Ваш номер:</label>
+              <input type="phone" name="" id="user_phone" placeholder="8 (XXX) XXX XX XX" autocomplete="off">
+              <div id="submit_btn" class="submit_btn"><span>Сделать заказ</span></div>
+            </form>
+          </div>
+          
+        </div>
+    	</div>
+    </div>
+  </header>
+  <div class="humburger">
+  <a id="hamburger-icon" href="#" title="Menu">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+    <span class="line line-3"></span>
+  </a>
+  </div>
+  <div class="nav-wrap">
+  <nav class="navigation">
+    <ul>
+      <li><a href="javascript://0" onclick="slowScroll ('header')">Главная</a></li>
+      <li><a href="javascript://0" onclick="slowScroll ('#sect-1')">Каталог</a></li>
+      <li id="toggle-list"><a href="javascript://0">Акции</a>
+        <span class="sail-options navigation">
+          <ul>
+            <li><a href="javascript://0" onclick="slowScroll ('#sect-2')">Акция: Закажи 3 бутылки воды получи помпу в подарок!</a></li>
+            <li><a href="javascript://0" onclick="slowScroll ('#sect-4')">Акция: Закажи 6 бутылок воды, получи настольный кулер в подарок!</a></li>
+            <li><a href="javascript://0" onclick="slowScroll ('#sect-6')">Акция: Закажи 10 бутылок воды, получи кулер в подарок!</a></li>
+          </ul>
+        </span>
+      </li>
+      <li><a href="javascript://0" onclick="slowScroll ('#sect-5')">Производство</a></li>
+      <li><a href="javascript://0" onclick="slowScroll ('#sect-7')">Доставка</a></li>
+      <li><a href="javascript://0" onclick="slowScroll ('#sect-8')">Схема работы</a></li>
+      <li><a href="javascript://0" onclick="slowScroll ('#sect-9')">Контакты</a></li>
+    </ul>
+  </nav>
+  </div>
+  <section id="sect-1">
+  	<div class="container">
+
+      <h1>Каталог</h1>
+      <div class="products">
+        <div class="row">
+          <div class="col">
+            <div class="price">195р.</div>
+            <img src="images/bottles/bottle1-min.png" alt="бутылки">
+            <h2>Белый лёд</h2>
+            <p>Вода первой категории</p>
+            <div class="products-btn open-modal" data-modal="#modal1" data-info="Белый лёд, 195р.">Сделать заказ</div>
+          </div>
+          <div class="col">
+            <div class="price">275р.</div>
+            <img src="images/bottles/bottle2-min.png" alt="бутылки">
+            <h2>Павловская вода</h2>
+            <p>Вода высшей категории</p>
+            <div class="products-btn open-modal" data-modal="#modal1" data-info="Павловская вода, 275р.">Сделать заказ</div>
+          </div>
+          <div class="col">
+            <div class="price">319р.</div>
+            <img src="images/bottles/bottle3-min.png" alt="бутылки">
+            <h2>Вода Королевская</h2>
+            <p>Вода категории - Премиум</p>
+            <div class="products-btn open-modal" data-modal="#modal1" data-info="Вода Королевская, 319р.">Сделать заказ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sect-2" class="sale-block">
+    <div class="container">
+    	<div class="bottle-sale">
+        <img src="images/bottles/sale-bottle-min.png">
+        <div class="sale"><span id="little-s">x</span><span id="big-s">3</span></div> 
+      </div>
+      <div class="sale-info">
+        <h2><span>Акция:</span><br> При заказе от 3-х бутылей воды, <span>помпа в подарок!</span></h2>
+        <div class="products-btn open-modal" data-modal="#modal1" data-info="Акция: 3 бутыли">Сделать заказ</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sect-3">
+    <div class="container">
+      <div class="sale-info">
+        <h2>Вода обогащенная кислородом</h2>
+        <h3>позволяет увеличить процент использования легких до состояния нормы</h3>
+        <p>При заболеваниях дыхательной системы лёгкие в среднем работают на 21 %</p>
+        <div class="products-btn open-modal" data-modal="#modal1">Сделать заказ</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sect-4" class="sale-block">
+    <div class="container">
+      <div class="bottle-sale">
+        <img src="images/bottles/sale-bottle-min.png">
+        <div class="sale"><span id="little-s">x</span><span id="big-s">6</span></div> 
+      </div>
+      <div class="sale-info">
+        <h2><span>Акция:</span><br> При заказе от 6-х бутылей воды, <span>помпа в подарок!</span></h2>
+        <div class="products-btn open-modal" data-modal="#modal1" data-info="Акция: 6 бутылей">Сделать заказ</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sect-5">
+    <div class="container">
+      <div class="how-get-water-info">
+        <h2>Как мы получаем идеально чистую воду?</h2>
+        <ol>
+          <li>Вода поступает во внешнюю колбу фильтра.</li>
+          <li>Вода продавливается через намотку из проволоки, покрытой стеклом. Расстояние между витками проволоки — 1 микрон, благодаря этому грязь остается во внешней колбе. Размер каждого микроба превышает 1 микрон, поэтому фильтр защищает воду от микроорганизмов на 100%.</li>
+          <li>Далее вода проходит через стержень фильтра, который покрыт активированным серебром</li>
+          <li>Вода проходит несколько ступеней очистки, приобретает восстановительные свойства</li>
+          <li>Нежелательные загрязнения удаляются</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="sect-6" class="sale-block">
+    <div class="container">
+      <div class="bottle-sale">
+        <img src="images/bottles/sale-bottle-min.png">
+        <div class="sale"><span id="little-s">x</span><span id="big-s">10</span></div> 
+      </div>
+      <div class="sale-info">
+        <h2><span>Акция:</span><br> При заказе от 10-х бутылей воды, <span>помпа в подарок!</span></h2>
+        <div class="products-btn open-modal" data-modal="#modal1" data-info="Акция: 10 бутылей">Сделать заказ</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sect-7">
+    <div class="container">
+      <div class="wrapper">
+        <div class="left-content">
+          <h2>Бесплатная доставка воды по Элисте.</h2>
+          <p>Вот уже 10 лет мы доставляем воду в районы Элисты. В нашем штате более 40 водителей, каждый день мы привозим воду точно в назначенное время и место. За это время работы мы разработали собственную систему логистики и прокладываем маршруты без потери дополнительного времени.</p>
+          <p class="just-bold">Если вас нет на месте, наш курьер дождется вас в течение 17 минут.</p>
+          <div class="products-btn open-modal" data-modal="#modal1">Сделать заказ</div>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+  </section>
+
+  <section id="sect-8">
+    <div class="container">
+      <div class="vertical-colunm">
+        <img src="images/first-arrow.png" alt="">
+        <img src="images/second-arrow.png" alt="">
+        <img src="images/first-arrow.png" alt="">
+        <img src="images/second-arrow.png" alt="">
+      </div>
+      <h2>Схема работы</h2>
+      <div class="wrapper">
+        <div class="col">
+          <img src="images/sсheme-work/paper-airplane.png" alt="paper airplane">
+          <h3>Заявка</h3>
+          <p>Вы оставляете заявку, и наш менеджер связывается с вами, подбирает для вас воду, кулер и аксессуары к нему.</p>
+        </div>
+        <div class="col">
+          <img src="images/sсheme-work/clock.png" alt="clock">
+          <h3>Время доставки</h3>
+          <p>Мы формируем заявку, подбираем удобное для вас время доставки.</p>
+        </div>
+        <div class="col">
+          <img src="images/sсheme-work/credit-card_poster_.png" alt="credit card">
+          <h3>Оплата заказа</h3>
+          <p>Мы выставляем счет. Доставку воды можно оплатить любым удобным способом: наличными, банковской картой, безналичный расчет.</p>
+        </div>
+        <div class="col">
+          <img src="images/sсheme-work/route.png" alt="route">
+          <h3>Доставка</h3>
+          <p>После оплаты мы загружаем машину и отправляем к вам, в удобное время и место.</p>
+        </div>
+        <div class="col">
+          <img src="images/sсheme-work/smartphone.png" alt="smartphone">
+          <h3>Последующий сервис и обслуживание</h3>
+          <p>Мы разработали программу, по которой следим за скоростью расхода воды наших клиентов, как только у вас заканчивается вода, мы позвоним вам и напомним, что нужно привезти вам еще. Если у вас сломалось оборудование, мы приедем и произведем технические работы или просто заменим его.</p>
+        </div>
+      </div>
+      <div class="products-btn open-modal" data-modal="#modal1">Сделать заказ</div>
+    </div>
+  </section>
+
+  <section id="sect-9">
+    <div class="container">
+      <h2>Контакты</h2>
+      <h2 class="phones-info">
+        <span>8 (927) 596 57 16</span>
+        <span>8 (988) 546 73 21</span>
+      </h2>
+      <address>г.Эиста, улица Пушкина д.87</address>
+      <p>waterdrop@mail.ru</p>
+      <p class="info-text">Заявки с сайта принимаются ежедневно, круглосуточно, без выходных!</p>
+      <div class="products-btn open-modal" data-modal="#modal1">Оставить заявку</div>
+    </div>
+  </section>
+	<footer>
+		<h2>
+      <div class="divide-block">
+        ООО "Капля"
+      </div> 
+      <div class="divide-block"> 
+       <a href="http://waterdrop.ru/admin.php" class="admin-page">ИНН</a> <span>7734536601</span>
+      </div> 
+      <div class="divide-block"> 
+       КПП <span>777321001</span>
+      </div>
+      <div class="divide-block"> 
+       ОГРН <span>1893746362326</span></h2>
+      </div>
+    <a href="https://vk.com/notexe" target="_BLANK">Политика конфиденциальности</a>
+	</footer>
+
+<!-- modal -->
+  <div class='modal' id='modal1'>
+    <div class='content'>
+      <!-- <h2>Оставить заявку</h2> -->
+      <form method="post">
+        <label for="modal_user_name">Ваше имя:</label>
+        <input type="text" name="" id="modal_user_name" placeholder="Дмитрий" autocomplete="off">
+        <label for="modal_user_phone">Ваш номер:</label>
+        <input type="phone" name="" id="modal_user_phone" placeholder="8 (XXX) XXX XX XX" autocomplete="off">
+        <div id="modal_submit_btn" class="submit_btn"><span>Сделать заказ</span></div>
+      </form>
+    </div>  
+  </div>
+<!-- +++++++++++++++++++ -->
+  <script>
+    var SECONDARY_INFO = "";
+  </script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/validate.js"></script>
+  <script>
+    function initMap() {
+        var uluru = {lat: 46.318932, lng: 44.2668677};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpslKBI2nAbx_eiRfpdR-M4gsaGg6KGw8&callback=initMap"></script>
+</body>
+</html>
